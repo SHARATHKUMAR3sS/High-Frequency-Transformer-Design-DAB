@@ -118,29 +118,27 @@ At high frequencies, conductor current distribution becomes non-uniform due to t
 
 ### Solid Conductor Current Distribution
 
-![Solid Current Density](images/femm/solid_current_density.png)
+![Solid Current Density](images/solid_J_distribution.png)
 
 ### Litz Wire Current Distribution
 
-![Litz Current Density](images/femm/litz_current_density.png)
+![Litz Current Density](images/36awg(litz)_J_distribution.png)
 
 ### Solid Conductor Flux Distribution
 
-![Solid Flux Density](images/femm/solid_flux_density.png)
+![Solid Flux Density](images/solid_wire_B_distribution.png)
 
 ### Litz Wire Flux Distribution
 
-![Litz Flux Density](images/femm/litz_flux_density.png)
+![Litz Flux Density](images/36AWG(litz)_B_distribution.png)
 
 ### Key Observations
 
-* Significant current crowding was observed in the solid conductor.
-* Current distribution in Litz wire was substantially more uniform.
-* Effective conductor utilization improved using Litz wire.
-* High-frequency copper losses were reduced through strand-based winding design.
-* FEMM results validated the selection of Litz wire for transformer windings.
-
----
+- Significant current crowding was observed in the solid conductor.
+- Current distribution in the Litz-wire conductor was substantially more uniform.
+- Effective conductor utilization improved using Litz wire.
+- High-frequency copper losses were reduced through strand-based winding design.
+- FEMM results validated the selection of Litz wire for high-frequency transformer windings.
 
 ## Core-Loss Modelling using iGSE
 
