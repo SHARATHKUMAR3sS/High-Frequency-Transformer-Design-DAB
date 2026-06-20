@@ -169,7 +169,7 @@ An Excel-based design tool was developed to automate core-loss calculations usin
 * Duty-cycle variation support
 * Automated loss estimation
 
-![iGSE Calculator](images/excel/igse_calculator.png)
+![iGSE Calculator](images/igse_excel_tool.png)
 
 ---
 
