@@ -27,7 +27,7 @@ Unlike conventional transformer design approaches, this project investigates the
 
 | Parameter              | Value       |
 | ---------------------- | ----------- |
-| Rated Power            | 25 kW       |
+| Rated Power            | 5 kW       |
 | Switching Frequency    | 100 kHz     |
 | Input Voltage          | 180–270 V   |
 | Nominal Input Voltage  | 240 V       |
