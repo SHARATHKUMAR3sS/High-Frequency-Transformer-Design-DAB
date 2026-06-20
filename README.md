@@ -1,24 +1,25 @@
-# High-Frequency-Transformer-Design-DAB
-Design, core-loss modelling, FEMM analysis, and hardware development of a 25 kW high-frequency transformer for Dual Active Bridge (DAB) converters.
-
 # High-Frequency Transformer Design and Core-Loss Modelling for Dual Active Bridge Converters
 
 ## Overview
 
-This repository presents the complete design and development of a High-Frequency Transformer (HFT) for a Dual Active Bridge (DAB) converter operating at 100 kHz. The work includes transformer design using the Area Product Method, ferrite core selection, winding design, high-frequency conductor analysis using FEMM, core-loss modelling using the Improved Generalized Steinmetz Equation (iGSE), and hardware prototype development.
+This repository presents the complete design, analysis, and development of a High-Frequency Transformer (HFT) for Dual Active Bridge (DAB) converter applications. The project focuses on magnetic component design for high-frequency power conversion, including core selection, winding design, high-frequency conductor analysis, core-loss modelling, and hardware prototype development.
 
-Unlike conventional transformer design projects, this work combines analytical design, finite-element analysis, core-loss prediction, and practical hardware implementation.
+The work combines analytical design techniques, finite-element analysis using FEMM, Improved Generalized Steinmetz Equation (iGSE) based core-loss modelling, Excel-based design automation, and practical hardware implementation.
+
+Unlike conventional transformer design approaches, this project investigates the impact of non-sinusoidal excitation waveforms and high-frequency effects encountered in modern power electronic converters.
 
 ---
 
 ## Project Objectives
 
-* Design a high-frequency transformer for DAB converter applications.
+* Design a High-Frequency Transformer for DAB converter applications.
 * Select an appropriate ferrite core for 100 kHz operation.
-* Determine primary and secondary winding turns.
-* Investigate skin-effect and conductor current distribution.
-* Model core losses under non-sinusoidal excitation using iGSE.
-* Develop a hardware prototype for future validation.
+* Determine transformer turns ratio and winding configuration.
+* Investigate high-frequency current distribution effects.
+* Compare solid conductors and Litz wire using FEMM simulations.
+* Model core losses under square-wave and quasi-square-wave excitation using iGSE.
+* Develop an Excel-based core-loss prediction tool.
+* Fabricate a hardware prototype for future validation.
 
 ---
 
@@ -39,59 +40,193 @@ Unlike conventional transformer design projects, this work combines analytical d
 
 ## Design Workflow
 
-Converter Specifications
-
-↓
-
+```text
+DAB Converter Specifications
+           ↓
 Area Product Method
-
-↓
-
+           ↓
 Core Selection
-
-↓
-
+           ↓
 Turns Calculation
-
-↓
-
-Winding Design
-
-↓
-
+           ↓
+High-Frequency Winding Design
+           ↓
 FEMM Analysis
-
-↓
-
-Core-Loss Modelling
-
-↓
-
-Hardware Fabrication
+           ↓
+Core-Loss Modelling (iGSE)
+           ↓
+Excel Automation Tool
+           ↓
+Hardware Prototype Development
+```
 
 ---
 
 ## Skills Demonstrated
 
-* Magnetic Component Design
 * High-Frequency Transformer Design
+* Magnetic Component Design
 * Ferrite Core Selection
 * Area Product Method
-* FEMM
+* Winding Design
 * Skin-Effect Analysis
 * Litz-Wire Design
-* Steinmetz Core-Loss Modelling
+* FEMM
+* Core-Loss Modelling
+* Steinmetz Equation
 * Improved Generalized Steinmetz Equation (iGSE)
 * Power Electronics
-* Hardware Prototyping
+* Hardware Development
 
 ---
 
-## Documentation
+## Transformer Design Methodology
+
+The transformer was designed using the Area Product Method to satisfy the power handling and frequency requirements of the DAB converter.
+
+The design process included:
+
+* Core selection
+* Turns calculation
+* Winding design
+* Current density considerations
+* High-frequency conductor selection
+* Core-loss estimation
+
+Detailed calculations and derivations are provided in the project report.
+
+---
+
+## Core Selection and Area Product Method
+
+The EE65 ferrite core was selected based on area-product calculations and high-frequency operating requirements.
+
+The selected N87 ferrite material provides:
+
+* Low core losses at 100 kHz
+* High magnetic permeability
+* Good thermal performance
+* Suitability for high-frequency power conversion applications
+
+Detailed area-product calculations are included in the project documentation.
+
+---
+
+## High-Frequency Conductor Analysis using FEMM
+
+At high frequencies, conductor current distribution becomes non-uniform due to the skin effect and proximity effect. FEMM simulations were performed to investigate these phenomena and justify conductor selection.
+
+### Solid Conductor Current Distribution
+
+![Solid Current Density](images/femm/solid_current_density.png)
+
+### Litz Wire Current Distribution
+
+![Litz Current Density](images/femm/litz_current_density.png)
+
+### Solid Conductor Flux Distribution
+
+![Solid Flux Density](images/femm/solid_flux_density.png)
+
+### Litz Wire Flux Distribution
+
+![Litz Flux Density](images/femm/litz_flux_density.png)
+
+### Key Observations
+
+* Significant current crowding was observed in the solid conductor.
+* Current distribution in Litz wire was substantially more uniform.
+* Effective conductor utilization improved using Litz wire.
+* High-frequency copper losses were reduced through strand-based winding design.
+* FEMM results validated the selection of Litz wire for transformer windings.
+
+---
+
+## Core-Loss Modelling using iGSE
+
+Core losses were modelled using the Improved Generalized Steinmetz Equation (iGSE).
+
+The iGSE methodology was selected because conventional Steinmetz equations are primarily applicable to sinusoidal excitation, whereas DAB converters operate using non-sinusoidal waveforms.
+
+The developed methodology supports:
+
+* Sinusoidal excitation
+* Square-wave excitation
+* Quasi-square-wave excitation
+
+This approach enables more accurate prediction of ferrite core losses under practical converter operating conditions.
+
+---
+
+## Excel-Based Core-Loss Calculator
+
+An Excel-based design tool was developed to automate core-loss calculations using the iGSE methodology.
+
+### Features
+
+* Steinmetz parameter implementation
+* Square-wave loss calculation
+* Quasi-square-wave loss calculation
+* Frequency-dependent analysis
+* Duty-cycle variation support
+* Automated loss estimation
+
+![iGSE Calculator](images/excel/igse_calculator.png)
+
+---
+
+## Hardware Prototype
+
+A hardware prototype of the designed high-frequency transformer was fabricated using the selected EE65 ferrite core and winding configuration.
+
+### Prototype Assembly
+
+![Transformer Prototype](images/hardware/transformer_front.jpg)
+
+![Transformer Prototype](images/hardware/transformer_side.jpg)
+
+The fabricated transformer serves as a platform for future experimental validation of analytical and simulation results.
+
+---
+
+## Project Documentation
+
+### Available Documents
 
 * Final Project Report
 * Design Calculations
 * FEMM Analysis Results
-* Hardware Prototype Photographs
+* Core-Loss Modelling Methodology
+* Hardware Development Documentation
 
 ---
+
+## Project Outcomes
+
+* Designed a 25 kW High-Frequency Transformer for DAB converter applications.
+* Selected an EE65 ferrite core using the Area Product Method.
+* Performed high-frequency conductor analysis using FEMM.
+* Evaluated current-density distribution in solid and Litz-wire conductors.
+* Developed an iGSE-based core-loss modelling methodology.
+* Created an Excel-based core-loss prediction tool.
+* Fabricated a hardware prototype for future validation.
+
+---
+
+## Future Work
+
+* Experimental validation of core-loss predictions.
+* Open-circuit and short-circuit testing.
+* Thermal characterization of the transformer.
+* Efficiency analysis under load conditions.
+* Integration with a complete DAB converter system.
+
+---
+
+## Author
+
+Sharath Kumar
+B.Tech Electrical Engineering
+Indian Institute of Technology Bhubaneswar
+
+Project: High-Frequency Transformer Design and Core-Loss Modelling for Dual Active Bridge Converters
