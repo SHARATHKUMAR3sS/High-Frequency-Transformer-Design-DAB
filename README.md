@@ -179,9 +179,9 @@ A hardware prototype of the designed high-frequency transformer was fabricated u
 
 ### Prototype Assembly
 
-![Transformer Prototype](images/hardware/transformer_front.jpg)
+![Transformer Prototype](images/hardware_topview.png)
 
-![Transformer Prototype](images/hardware/transformer_side.jpg)
+![Transformer Prototype](images/hardware_frontview.png)
 
 The fabricated transformer serves as a platform for future experimental validation of analytical and simulation results.
 
